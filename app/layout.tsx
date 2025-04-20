@@ -1,6 +1,6 @@
-import type React from "react"
+import React from "react"
 import "./globals.css"
-import type { Metadata, Viewport } from "next"
+import { Metadata, Viewport } from "next"
 import { Inter } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import Analytics from "@/components/analytics"
