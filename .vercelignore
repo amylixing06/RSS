@@ -1,0 +1,11 @@
+# 忽略以下文件和目录
+node_modules
+.next
+.git
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# 不忽略.vercel目录
+!.vercel 
