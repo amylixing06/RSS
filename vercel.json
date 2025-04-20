@@ -1,6 +1,6 @@
 {
   "version": 2,
   "framework": "nextjs",
-  "buildCommand": "./build.sh",
-  "installCommand": "true"
+  "buildCommand": "chmod +x ./build.sh && ./build.sh",
+  "installCommand": "npm install --legacy-peer-deps"
 } 
