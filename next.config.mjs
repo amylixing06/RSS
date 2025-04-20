@@ -44,12 +44,16 @@ const nextConfig = {
       },
     ];
   },
-  // 确保输出正确的静态文件
-  output: 'export',
+  // 修改输出配置
+  output: 'standalone', // 改为standalone而非export
   // 防止README被当作首页
   trailingSlash: true,
   // 指定基础路径
   basePath: '',
+  // 修复Vercel部署问题
+  generateBuildId: async () => {
+    return 'build-' + Date.now()
+  }
 }
 
 mergeConfig(nextConfig, userConfig)

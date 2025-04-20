@@ -1,20 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "npm run build",
-  "outputDirectory": "out",
   "framework": "nextjs",
-  "routes": [
-    {
-      "src": "/",
-      "dest": "/index.html"
-    },
-    {
-      "src": "^/(?!.*\\.html$)(?!.*\\.js$)(?!.*\\.css$)(?!.*\\.json$)(?!.*\\.ico$)(?!.*\\.png$)(?!.*\\.svg$)(?!.*\\.jpg$)(?!.*\\.gif$)(?!.*\\.webp$)(.*)",
-      "dest": "/"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
-  ]
+  "buildCommand": "npm run build",
+  "installCommand": "npm install"
 } 

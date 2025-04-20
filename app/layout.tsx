@@ -1,6 +1,6 @@
 import type React from "react"
 import "./globals.css"
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Inter } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import Analytics from "@/components/analytics"
@@ -8,17 +8,23 @@ import Script from "next/script"
 
 const inter = Inter({ subsets: ["latin"] })
 
+export const viewport: Viewport = {
+  themeColor: "#000000",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+}
+
 export const metadata: Metadata = {
   title: "RSSence - RSS Feed Visualizer",
   description: "A free and open-source RSS feed visualizer for everyone",
   manifest: "/manifest.json",
-  themeColor: "#000000",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
     title: "RSSence"
   },
-  viewport: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no",
   verification: {
     other: {
       'isHomePage': 'true',
