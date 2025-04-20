@@ -19,6 +19,14 @@ export const metadata: Metadata = {
     title: "RSSence"
   },
   viewport: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no",
+  verification: {
+    other: {
+      'isHomePage': 'true',
+    }
+  },
+  alternates: {
+    canonical: '/',
+  },
 }
 
 export default function RootLayout({
@@ -30,6 +38,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+        <link rel="canonical" href="/" />
       </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>

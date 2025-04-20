@@ -44,6 +44,12 @@ const nextConfig = {
       },
     ];
   },
+  // 确保输出正确的静态文件
+  output: 'export',
+  // 防止README被当作首页
+  trailingSlash: true,
+  // 指定基础路径
+  basePath: '',
 }
 
 mergeConfig(nextConfig, userConfig)
