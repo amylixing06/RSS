@@ -31,14 +31,14 @@
 <br />
 <div align="center">
 
-<h3 align="center">RSSence</h3>
+<h1>RSSence - RSS订阅源可视化工具</h1>
 
 [![Support me on Patreon](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dsilversparkstudio%26type%3Dpatrons&style=plastic)](https://patreon.com/silversparkstudio)
 
-<a href="https://www.producthunt.com/posts/rssence?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-rssence" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=955121&theme=light&t=1745073300255" alt="RSSence - Your&#0032;modern&#0032;RSS&#0032;feed&#0044;&#0032;reimagined&#0046; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+<a href="https://www.producthunt.com/posts/rssence?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-rssence" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=955121&theme=light&t=1745073300255" alt="RSSence - Your modern RSS feed; reimagined. | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 
   <p align="center">
-RSSence was created in response to a request on r/SomebodyMakeThis, bringing to life the idea of a beautifully animated, fullscreen RSS visualizer. Inspired by classic RSS screensavers from the past, RSSence transforms your screen into a dynamic news hub, displaying headlines in a visually engaging way—think flipping cards, smooth transitions, and modern design. It’s an open-source, free tool designed for anyone who wants to bring their favorite feeds to life, whether on a TV, monitor, or secondary display.  
+RSSence是一个免费开源的RSS订阅源可视化工具，让您以美观生动的方式展示新闻和更新。
     <br />
     <br />
     <a href="https://youtu.be/RIK9aqslzko">View Demo</a>
@@ -50,9 +50,7 @@ RSSence was created in response to a request on r/SomebodyMakeThis, bringing to 
 </div>
 
 <p align="center">
-  <a href="https://github.com/silveralcid/RSSence/blob/main/demo.gif">
-    <img src="https://github.com/silveralcid/RSSence/raw/main/demo.gif" alt="Product Name Screen Shot">
-  </a>
+  <img src="https://github.com/silveralcid/RSSence/raw/main/demo.gif" alt="RSSence演示" width="80%">
 </p>
 
 
@@ -91,9 +89,9 @@ With the resurgence of RSS as a powerful, independent way to follow the web, RSS
 - **Responsive & Feature-Rich Interface:** Experience a mobile-friendly design with error handling, animated transitions, and optimized rendering for smooth performance.
 
 
-### Let’s spark something great together!
+### Let's spark something great together!
 
-Got a brilliant idea but no way to build it? Let’s make it happen! At [Silver Spark Studio](https://silverspark.studio/), we’re a fresh software development agency kicking off our journey by giving back. We’re looking for exciting micro-SaaS ideas—and if they benefit the general public, we’ll bring them to life for free or at cost. Best of all, everything we create will be open-source, so your idea can grow and thrive. 
+Got a brilliant idea but no way to build it? Let's make it happen! At [Silver Spark Studio](https://silverspark.studio/), we're a fresh software development agency kicking off our journey by giving back. We're looking for exciting micro-SaaS ideas—and if they benefit the general public, we'll bring them to life for free or at cost. Best of all, everything we create will be open-source, so your idea can grow and thrive. 
 
 Get in touch with us at [hello@silverspark.studio](mailto:hello@silverspark.studio)!
 
@@ -199,3 +197,57 @@ Silver Alcid - [@silveralcid](https://twitter.com/silveralcid) | [silver@silvers
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
+
+## 📱 新增PWA支持！
+
+RSSence现已支持PWA（渐进式Web应用），这意味着您可以：
+
+- 📲 将RSSence安装到您的设备主屏幕
+- 🔄 离线访问应用
+- ⚡ 享受更快的加载速度
+- 🔔 获得更新通知（未来版本）
+
+要安装此应用，只需在Chrome、Edge或其他支持PWA的浏览器中访问网站，然后点击地址栏中的"安装"按钮。
+
+## ✨ 主要功能
+
+- **简单的订阅源管理**：轻松添加、删除和验证RSS订阅源
+- **自定义显示选项**：调整内容大小、切换图片显示、设置卡片持续时间
+- **主题切换**：明亮、黑暗或跟随系统的主题模式
+- **动态背景**：使用自定义背景图片，选择气泡、彩色纸屑、星星等特效
+- **多时区时钟**：显示多个时区的时间
+- **响应式设计**：适配各种设备的屏幕尺寸
+
+## 🚀 快速开始
+
+1. 访问 [RSSence网站](https://rssence.vercel.app/)
+2. 点击设置图标添加您喜欢的RSS订阅源
+3. 调整显示设置
+4. 享受您的个人资讯流！
+
+## 🛠 技术栈
+
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [PWA](https://web.dev/progressive-web-apps/)
+
+## 🤝 贡献
+
+欢迎贡献！无论是功能请求、bug报告还是代码贡献，我们都非常感谢。
+
+1. 复刻项目
+2. 创建您的特性分支 (`git checkout -b feature/AmazingFeature`)
+3. 提交您的更改 (`git commit -m '添加一些特性'`)
+4. 推送到分支 (`git push origin feature/AmazingFeature`)
+5. 开启一个Pull Request
+
+## 📄 许可证
+
+本项目采用MIT许可证 - 详情请查看 `LICENSE` 文件
+
+## 📞 联系我们
+
+Silver Alcid - [@silveralcid](https://twitter.com/silveralcid) | [silver@silverspark.studio](mailto:silver@silverspark.studio)
+
+<p align="right">(<a href="#readme-top">返回顶部</a>)</p>
