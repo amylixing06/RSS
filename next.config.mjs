@@ -16,10 +16,11 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  // 减少实验性功能，增加稳定性
   experimental: {
-    webpackBuildWorker: true,
-    parallelServerBuildTraces: true,
-    parallelServerCompiles: true,
+    // webpackBuildWorker: true,
+    // parallelServerBuildTraces: true,
+    // parallelServerCompiles: true,
   },
   // PWA配置
   headers: async () => {
@@ -53,7 +54,9 @@ const nextConfig = {
   // 修复Vercel部署问题
   generateBuildId: async () => {
     return 'build-' + Date.now()
-  }
+  },
+  // 关闭React严格模式，可能解决兼容性问题
+  reactStrictMode: false,
 }
 
 mergeConfig(nextConfig, userConfig)
