@@ -4,7 +4,6 @@ import { Metadata, Viewport } from "next"
 import { Inter } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import Analytics from "@/components/analytics"
-import Script from "next/script"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -19,12 +18,6 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "RSSence - RSS Feed Visualizer",
   description: "A free and open-source RSS feed visualizer for everyone",
-  manifest: "/manifest.json",
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: "default",
-    title: "RSSence"
-  },
   verification: {
     other: {
       'isHomePage': 'true',
@@ -43,7 +36,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
         <link rel="canonical" href="/" />
       </head>
       <body className={inter.className}>
@@ -51,7 +43,6 @@ export default function RootLayout({
           {children}
           <Analytics />
         </ThemeProvider>
-        <Script src="/sw-register.js" strategy="lazyOnload" />
       </body>
     </html>
   )

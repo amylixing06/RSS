@@ -22,7 +22,8 @@ const nextConfig = {
     // parallelServerBuildTraces: true,
     // parallelServerCompiles: true,
   },
-  // PWA配置
+  // PWA配置 - 注释掉PWA相关配置
+  /* 
   headers: async () => {
     return [
       {
@@ -45,6 +46,7 @@ const nextConfig = {
       },
     ];
   },
+  */
   // 防止README被当作首页
   trailingSlash: true,
   // 指定基础路径
