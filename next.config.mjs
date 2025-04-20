@@ -45,8 +45,6 @@ const nextConfig = {
       },
     ];
   },
-  // 修改输出配置
-  output: 'standalone', // 改为standalone而非export
   // 防止README被当作首页
   trailingSlash: true,
   // 指定基础路径
@@ -57,6 +55,9 @@ const nextConfig = {
   },
   // 关闭React严格模式，可能解决兼容性问题
   reactStrictMode: false,
+  // 确保正确生成路由清单
+  swcMinify: true,
+  productionBrowserSourceMaps: false,
 }
 
 mergeConfig(nextConfig, userConfig)

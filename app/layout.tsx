@@ -35,43 +35,6 @@ export const metadata: Metadata = {
   },
 }
 
-// 简单的错误边界组件
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-
-  componentDidCatch(error, errorInfo) {
-    console.error("应用错误:", error, errorInfo);
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return (
-        <div className="flex h-screen w-full items-center justify-center bg-background">
-          <div className="text-center p-4">
-            <h1 className="text-2xl font-bold mb-4">应用出现问题</h1>
-            <p className="mb-4">很抱歉，应用加载过程中出现了错误。</p>
-            <button 
-              onClick={() => this.setState({ hasError: false })}
-              className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-            >
-              重试
-            </button>
-          </div>
-        </div>
-      );
-    }
-
-    return this.props.children;
-  }
-}
-
 export default function RootLayout({
   children,
 }: {
@@ -84,12 +47,10 @@ export default function RootLayout({
         <link rel="canonical" href="/" />
       </head>
       <body className={inter.className}>
-        <ErrorBoundary>
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-            {children}
-            <Analytics />
-          </ThemeProvider>
-        </ErrorBoundary>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          {children}
+          <Analytics />
+        </ThemeProvider>
         <Script src="/sw-register.js" strategy="lazyOnload" />
       </body>
     </html>
