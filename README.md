@@ -1,5 +1,8 @@
 <!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a id="readme-top"></a>
+
+> **⚠️ 维护公告：** 系统目前处于维护状态，我们暂时禁用了PWA功能以解决应用加载问题。如果遇到"应用加载过程中出现严重错误"的提示，请尝试清除浏览器缓存和Cookie，或使用无痕/隐私模式访问。
+
 <!--
 *** Thanks for checking out the Best-README-Template. If you have a suggestion
 *** that would make this better, please fork the repo and create a pull request

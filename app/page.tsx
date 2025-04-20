@@ -1,43 +1,44 @@
 'use client'
 
-import { Suspense, useState, useEffect } from "react"
-import FeedVisualizer from "@/components/feed-visualizer"
-import SettingsPanel from "@/components/settings-panel"
-// import AnalyticsTest from "@/components/analytics-test"
-import { FeedProvider } from "@/context/feed-context"
+import { useState, useEffect } from "react"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
 
 export default function Home() {
-  // 客户端渲染安全措施
+  // 简单的客户端渲染检测
   const [isClient, setIsClient] = useState(false)
   
   useEffect(() => {
     setIsClient(true)
   }, [])
 
-  // 渲染加载状态
-  const LoadingComponent = () => (
-    <div className="flex h-screen w-full items-center justify-center bg-background">
-      <div className="text-center">
-        <div className="mb-4 h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent mx-auto"></div>
-        <div className="text-2xl font-medium">加载应用中...</div>
-      </div>
-    </div>
-  )
-
-  if (!isClient) {
-    return <LoadingComponent />
-  }
-
   return (
-    <FeedProvider>
-      <main className="relative min-h-screen bg-background">
-        <Suspense fallback={<LoadingComponent />}>
-          <FeedVisualizer />
-          <SettingsPanel />
-          {/* <AnalyticsTest /> */}
-        </Suspense>
-      </main>
-    </FeedProvider>
+    <main className="flex min-h-screen flex-col items-center justify-center bg-background p-4">
+      <div className="max-w-lg text-center">
+        <h1 className="text-3xl font-bold mb-6">RSSence - RSS订阅源可视化工具</h1>
+        
+        <p className="mb-6 text-lg">
+          欢迎使用RSSence，您的RSS订阅源可视化工具。我们正在进行系统维护，以改善您的体验。
+        </p>
+        
+        <p className="mb-8 text-muted-foreground">
+          目前我们暂时停用了PWA功能以修复一些加载问题。
+          请尝试清除您的浏览器缓存和Cookie，然后再次访问本站。
+        </p>
+        
+        <div className="space-y-4">
+          <Button onClick={() => window.location.reload()} className="w-full">
+            刷新页面
+          </Button>
+          
+          <Button variant="outline" asChild className="w-full">
+            <Link href="https://github.com/silveralcid/rssence">
+              访问项目GitHub
+            </Link>
+          </Button>
+        </div>
+      </div>
+    </main>
   )
 }
 
